@@ -1,0 +1,21 @@
+<div class="panel">
+  <div class="generator">
+    <h1>ALPACA GENERATOR</h1>
+    <div>
+      <div class="result">
+        <app-result [imageResources]="imageResources"></app-result>
+      </div>
+      <div class="styles">
+        <app-styles
+          [decorations]="decorations"
+          (changeStyleEvent)="changeStyle($event)"
+        ></app-styles>
+      </div>
+    </div>
+    <div class="options">
+      <button>Random</button>
+      <button>Download</button>
+    </div>
+  </div>
+</div>
+<button (click)="goToVocabulary()">Go to vocabulary test</button>

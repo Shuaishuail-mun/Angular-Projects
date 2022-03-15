@@ -1,0 +1,31 @@
+<div>
+  <form [formGroup]="languageForm" (ngSubmit)="submitlanguage()">
+    <label for="first-language">
+      first Language:{{this.languageForm.value['firstLanguage']}}
+    </label>
+    <br/>
+    <input type="text" id="first-language" formControlName="firstLanguage"/>
+    <p *ngIf="languageForm.controls['firstLanguage'].errors?.['required']">
+      first Language is required
+    </p>
+    <p *ngIf="languageForm.controls['firstLanguage'].errors?.['minlength']">
+      first Language must be at least 3 characters long.
+    </p>
+    <br/>
+    <label for="second-language">
+      second Language:{{this.languageForm.value['secondLanguage']}}
+    </label>
+    <br/>
+    <input type="text" id="second-language" formControlName="secondLanguage"/>
+    <p *ngIf="languageForm.controls['secondLanguage'].errors?.['required']">
+      second Language is required
+    </p>
+    <p *ngIf="languageForm.controls['secondLanguage'].errors?.['minlength']">
+      second Language must be at least 3 characters long.
+    </p>
+    <br/>
+    <button type="submit" [disabled]="!languageForm.valid">
+      Let's make list of vocabulary
+    </button>
+  </form>
+</div>

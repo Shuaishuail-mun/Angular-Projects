@@ -1,0 +1,23 @@
+<div>
+  <h4>Accessorize the Alpaca's</h4>
+  <div class="showStyle">
+    <button
+      *ngFor="let item of (decorations | keyvalue)"
+      [ngClass]="(selectedPart === item.key)? 'selected' : 'unselected'"
+      (click)="changePart(item.key)"
+    >
+      {{item.key}}
+    </button>
+  </div>
+  <hr/>
+  <h4>Style</h4>
+  <div class="showStyle">
+    <button
+      *ngFor="let item of decorations[selectedPart]; let i = index"
+      [ngClass]="(selectedStyle === i)? 'selected' : 'unselected'"
+      (click)="changeStyle(i)"
+    >
+      {{item}}
+    </button>
+  </div>
+</div>

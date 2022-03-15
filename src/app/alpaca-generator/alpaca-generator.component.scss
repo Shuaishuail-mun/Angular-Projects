@@ -1,0 +1,19 @@
+.panel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  .generator{
+    background-color: rgba(166, 166, 166, 0.53);
+    padding: 2em;
+    .result, .styles{
+      display: inline-block;
+    }
+    .options{
+      padding: 1em 0 1em 0;
+      button{
+        margin-right: 1em;
+      }
+    }
+  }
+}

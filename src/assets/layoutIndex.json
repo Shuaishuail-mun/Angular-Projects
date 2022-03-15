@@ -1,0 +1,11 @@
+{
+  "backgrounds": 1,
+  "neck": 2,
+  "leg": 3,
+  "accessories": 10,
+  "ears": 5,
+  "hair": 6,
+  "eyes": 7,
+  "mouth": 8,
+  "nose": 9
+}

@@ -1,0 +1,6 @@
+<div class="result">
+  <img *ngFor="let item of imageResources | keyvalue"
+    src="../../assets/alpaca/{{item.key}}/{{item.value}}"
+    style="z-index:{{layoutIndex[item.key]}}"
+  />
+</div>
